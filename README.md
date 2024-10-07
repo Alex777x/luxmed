@@ -14,8 +14,11 @@ technologies (for some converting, for example)
 **Note**: keep it simple and clear, fulfilling the minimum requirements.
 Push the project to the GitHub repository and share the link with us
 
-Bonus rear (not required): write tests for the service using any technologies and approaches that you consider relevant
-for checking basic functionality.
+**Bonus** rear (not required):
+write tests for the service using any technologies and approaches that you consider relevant for checking basic
+functionality.      
+
+
 -----------------------------------------------------------------------------------------------------------------------
 
 # Getting Started
