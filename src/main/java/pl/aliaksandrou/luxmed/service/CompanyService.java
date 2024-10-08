@@ -33,7 +33,7 @@ public class CompanyService implements ICompanyService {
             throw new IllegalArgumentException("Company cannot be null");
         }
         validator.validate(company);
-        log.debug("Creating company: {}", company);
+        log.info("Creating company: {}", company);
         return companyRepository.save(company);
     }
 
@@ -43,7 +43,7 @@ public class CompanyService implements ICompanyService {
         if (id == null) {
             throw new IllegalArgumentException(ID_MUST_NOT_BE_NULL);
         }
-        log.debug("Getting company by id: {}", id);
+        log.info("Getting company by id: {}", id);
         return companyRepository.findById(id);
     }
 
@@ -51,7 +51,7 @@ public class CompanyService implements ICompanyService {
     @Transactional(readOnly = true)
     public List<Company> getAllCompanies() {
         List<Company> companies = companyRepository.findAll();
-        log.debug("Getting all companies: {}", companies);
+        log.info("Getting all companies: {}", companies);
         return companies;
     }
 
@@ -61,7 +61,7 @@ public class CompanyService implements ICompanyService {
             throw new IllegalArgumentException("Id and company details cannot be null");
         }
         validator.validate(companyDetails);
-        log.debug("Updating company with id: {} and details: {}", id, companyDetails);
+        log.info("Updating company with id: {} and details: {}", id, companyDetails);
         var company = companyRepository.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("Company not found"));
 
