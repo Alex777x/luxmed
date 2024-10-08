@@ -16,7 +16,7 @@ Push the project to the GitHub repository and share the link with us
 
 **Bonus** rear (not required):
 write tests for the service using any technologies and approaches that you consider relevant for checking basic
-functionality.      
+functionality.
 
 
 -----------------------------------------------------------------------------------------------------------------------
@@ -73,4 +73,8 @@ Tests are written using JUnit 5 and Mockito. To run the tests, execute the follo
 mvn test
 ```
 
-Run queries from the **company-requests-test.http** file to test the application endpoints. 
+Run queries from the **company-requests-test.http** file to test the application endpoints.
+
+### API Documentation
+
+The API documentation is available at `http://localhost:8080/swagger-ui/index.html`.    
