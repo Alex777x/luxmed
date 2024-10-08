@@ -1,0 +1,84 @@
+### Yu can use this file to test the API requests using the REST Client extension in IntelliJ IDEA
+
+### POST request to create companies
+POST http://localhost:8080/api/companies
+Content-Type: application/json
+
+{
+  "name": "Test Company",
+  "departments": [
+    {
+      "name": "Department 1",
+      "teams": [
+        {
+          "name": "Team 1",
+          "project": {
+            "name": "Project 1",
+            "manager": {
+              "name": "Manager 1",
+              "contactInformation": {
+                "email": "manager1@example.com",
+                "phone": "123-456-7890"
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Department 2",
+      "teams": [
+        {
+          "name": "Team 2",
+          "project": {
+            "name": "Project 2",
+            "manager": {
+              "name": "Manager 2",
+              "contactInformation": {
+                "email": "manager2@example.com",
+                "phone": "123-456-7890"
+              }
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
+
+### GET request to get company by id
+GET http://localhost:8080/api/companies/1
+
+### GET request to get all companies
+GET http://localhost:8080/api/companies
+
+### PUT request to update company
+PUT http://localhost:8080/api/companies/1
+Content-Type: application/json
+
+{
+  "name": "Updated Test Company",
+  "departments": [
+    {
+      "name": "Updated Department 1",
+      "teams": [
+        {
+          "name": "Updated Team 1",
+          "project": {
+            "name": "Updated Project 1",
+            "manager": {
+              "name": "Updated Manager 1",
+              "contactInformation": {
+                "email": "manager1@example.com",
+                "phone": "123-456-7890"
+              }
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
+
+### DELETE request to delete company by id
+DELETE http://localhost:8080/api/companies/1
