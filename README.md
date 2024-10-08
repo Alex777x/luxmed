@@ -72,3 +72,5 @@ Tests are written using JUnit 5 and Mockito. To run the tests, execute the follo
 ```bash
 mvn test
 ```
+
+Run queries from the **company-requests-test.http** file to test the application endpoints. 
